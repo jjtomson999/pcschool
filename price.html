@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>コース別料金</h1>
+  <ol>
+   <li><a href="index.html">メニュー</a></li>
+   <li><a href="#">料金</a></li>
+
+  </ol>
+  </header>
+  <table class="excel">
+    <thead>
+      <th>入学金</th>
+　　　 <th>授業料</th>
+　　　　
+    </thead>
+    <tr>
+　　　Excelコース
+    </tr>
+    <td>
+    &yen;19000
+    </td>
+    <td>
+      12回分で&yen;合計12000
+    </td>
+  </table>
+  <section class="excel">
+  <h2>Excelコースについて</h2>
+  <nav>
+    <ul>
+      <li>Excelの基本関数　テーブルやフィルタ</li>
+      <li>Excel応用関数　Vlookupや祝日だけ表示する関数</li>
+      <li>VBAマクロ　業務効率化</li>
+    </ul>
+  </nav>
+  </section>
+
+  <table class="webcreate">
+    <thead>
+      <th>入学金</th>
+　　　 <th>授業料</th>
+　　　　
+    </thead>
+    <tr>
+     Web制作コース
+    </tr>
+    <td>
+    &yen;23000
+    </td>
+    <td>
+      12回分で&yen;合計15000
+    </td>
+  </table>
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      pad: 0;
+    }
+    html{
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 14px;
+    }
+    
+    header{
+      background: skyblue;
+      text-align: center;
+      font-family:Verdana, Geneva, Tahoma, sans-serif
+    }
+    ol{
+      display: flex;
+      list-style: none;
+      gap: 10px;
+    }
+    ol li{
+      font-size: 8px;
+    }
+    ol li::after{
+      content: ">>";
+
+    }
+    ol  li:last-child:after{
+      content: "";
+    }
+    /* ここまでパンくずりすと */
+    table{
+      border-collapse: collapse;
+      width: 88%;
+      margin: 0 auto 30px auto;
+    }
+    tr:first-child{
+      background: green;
+    }
+    .webcreate th{
+      background:#ffdf;
+      text-align: center;
+    }
+    tr,th,td{
+      border: 1px solid black;
+      text-align: center;
+      
+    }
+    td,th{
+      padding: 12px;
+    }
+    /* 各メニュー */
+   section.excel{
+    text-align: center;
+    width: 100%;
+    font-size: .5rem;
+   
+    
+   }
+   section.excel ul{
+    list-style: none;
+   }
+   section.excel ul li{
+    padding: 8px;
+    border-bottom: 1px solid red;
+   }
+   section.excel ul li:last-child{
+    border: none;
+   }
+  </style>
+</body>
+</html>

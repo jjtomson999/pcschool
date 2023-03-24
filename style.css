@@ -1,0 +1,305 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 20px;
+}
+
+#load{
+  opacity: 0;
+}
+
+li{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  display: block;
+}
+h1,h2,h3{
+  font-size: 0.6rem;
+}
+p{
+  font-size: .4rem
+}
+/* ここまで共通の設定 */
+.top{
+  width: 90%;
+  
+  display: flex;
+  justify-content: flex-end;
+}
+.top ul{
+  display:grid;
+  position: relative;
+}
+header{
+  width: 100%;
+
+}
+
+header h1{
+  font-size: 0;
+  width: 30%;
+}
+header h1 img{
+  max-width: 100%;
+}
+
+header button{
+  width: 120px;
+  height: 20px;
+  margin-left: auto;
+  margin-bottom: 10px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}
+header button span{
+  position: absolute;
+  display: inline-block;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translate(-50%,-50%);
+  transform: translateX(-120px);
+  color: white;
+  transition: transform .5s;
+}
+header button:hover span{
+  transform: translateX(0);
+  color: white;
+}
+nav{
+  background:bisque;
+  height: 60px;
+}
+nav ul.menu{
+  display: flex;
+  justify-content:center;
+  gap: 30px;
+}
+ul.menu li{
+  font-size: .5rem;
+  white-space: nowrap;
+  font-family: 'Times New Roman', Times, serif
+}
+ul.menu li a{
+  filter: drop-shadow(1px 1px 2px #d5bdbd);
+
+}
+ul.menu li a:hover{
+  opacity: 0.7;
+}
+ul.lists li{
+  visibility: hidden;
+  width:0;
+  
+}
+.menu li:hover .lists li{
+  visibility:visible;
+  transform: scale(0.7);
+  height: auto;
+  transition: all .5s;
+}
+
+/* ここまでheader */
+/* ここからmainvisual */
+#mainvisual{
+  width: 100%;
+  margin: 20px auto 0 auto;
+  position: relative;
+}
+.voice{
+  position: absolute;
+  top: 100px;
+  left: 80px;
+  transform: translate(-50%,-50%);
+  white-space: nowrap;
+  font-size: .6rem;
+  color: white;
+  background: #a49090;
+}
+/* aside */
+#mainvisual{
+  display: flex;
+  
+  gap: 40px;
+}
+/* aside ここから*/
+aside{
+  
+  text-align: center;
+  font-size: 0.5rem;
+}
+aside img{
+  width:70%;
+}
+/*asideここまで */
+
+/* セクションのまとまり */
+#content-wrapper{
+  width:100%;
+  margin: 0 auto;
+  background:rgb(174, 210, 174);
+}
+/* mainvisual */
+#mainvisual img{
+  max-width: 100%;
+  object-fit: cover;
+}
+#mainvisual{
+  display: flex;
+  flex-direction: column;
+}
+.message{
+  text-align: center;
+  font-size: .6rem;
+  color: red;
+}
+/* ここまでmainvisual */
+.desc{
+  display: flex;
+  
+}
+/* main */
+.circle{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px dotted skyblue;
+  text-align: center;
+  background: rgb(141, 141, 186);
+  color: white;
+  position: relative;
+}
+.circle::after{
+  content: "";
+  height: 200%;
+  border: 1px dotted black;
+  position: absolute;
+  left: 12px;
+  top: 30px;
+}
+section:nth-child(4) .circle::after{
+  content: "";
+  border: none;
+}
+
+.info{
+  flex: 1;
+}
+.info p{
+  line-height: 1.7;
+  background:#eeee;
+  display: inline-block;
+}
+section.main-content{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+section.course{
+  margin-top: 60px;
+}
+section.course h1{
+  color: red;
+  text-align: center;
+
+}
+section.course h1,section.course h2{
+  white-space: nowrap;
+  font-size: .5rem;
+}
+section.main-content img{
+  width: 60%;
+}
+.catch{
+  font-size: 0.3rem;
+  line-height:1.7;
+}
+
+.course-desc p{
+  font-size: 0.7rem;
+}
+/* footer */
+footer{
+  width: 100%;
+  height: auto;
+  background: #be9f9f;
+  text-align:center;
+}
+footer dl{
+  text-align: center;
+}
+footer dt, footer dd{
+  font-size:.3rem;
+  color: white;
+}
+footer small{
+  line-height: 100px;
+  
+  color: white;
+}
+
+
+
+
+/* mediac クエリ */
+@media screen and (min-width:600px) {
+  main{
+    width: 88%;
+    margin: 0 auto;
+  }
+  header h1{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+   ul.menu{
+      display: flex;
+   }
+   #mainvisual{
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+   }
+
+  .inner{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width: 86%;
+    margin: 0 auto;
+  }
+  section.main-content:nth-child(3) .inner{
+    flex-direction: row-reverse;
+  }
+
+  img{
+    max-width:100%;
+    height: auto;
+    border-radius:10%;
+  }
+  section.course h1{
+    color: black;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    border-bottom: 5px solid red;
+  }
+  section.course{
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .catch{
+    width: 60%;
+    border: 1px solid black;
+  }
+}
